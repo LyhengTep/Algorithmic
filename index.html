@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Neon Futuristic Enhanced</title>
+    <style>
+        :root {
+            --neon-blue: #00FFFF;
+            --neon-pink: #FF00FF;
+            --dark: #0A0A0A;
+            --light: #E0E0E0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        body {
+            background: var(--dark);
+            color: var(--light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header Enhancements */
+        header {
+            text-align: center;
+            padding: 4rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(0, 255, 255, 0.2), transparent);
+            animation: wave 5s infinite linear;
+            z-index: -1;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            background: linear-gradient(45deg, var(--neon-blue), var(--neon-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: neonFlicker 2s infinite alternate;
+        }
+
+        /* Header wave effect */
+        @keyframes wave {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes neonFlicker {
+            from {
+                text-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-pink);
+            }
+            to {
+                text-shadow: 0 0 20px var(--neon-blue), 0 0 30px var(--neon-pink);
+            }
+        }
+
+        /* Experience & Project Flip Card Enhancements */
+        .flip-card {
+            perspective: 1200px;
+            transform-style: preserve-3d;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 10px;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+            transition: box-shadow 0.5s;
+        }
+
+        .flip-card:hover .flip-card-front {
+            box-shadow: 0 0 20px var(--neon-blue);
+        }
+
+        .flip-card-back {
+            transform: rotateY(180deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--neon-pink);
+        }
+
+        /* Glowing Button */
+        button {
+            background: linear-gradient(45deg, var(--neon-blue), var(--neon-pink));
+            color: var(--dark);
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            animation: pulseGlow 1.5s infinite alternate;
+        }
+
+        @keyframes pulseGlow {
+            from {
+                box-shadow: 0 0 5px var(--neon-blue);
+            }
+            to {
+                box-shadow: 0 0 20px var(--neon-pink);
+            }
+        }
+
+        /* Footer Enhancements */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 4rem;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Alex Smith</h1>
+        <p>Full Stack Developer | UI/UX Designer</p>
+    </header>
+
+    <footer>
+        <p>&copy; 2023 Alex Smith. All rights reserved.</p>
+    </footer>
+</body>
+</html>
