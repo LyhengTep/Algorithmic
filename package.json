@@ -18,6 +18,8 @@
   "description": "",
   "dependencies": {
     "jest": "^29.7.0",
-    "readline-sync": "^1.4.10"
+    "paralleljs": "^1.1.0",
+    "readline-sync": "^1.4.10",
+    "webppl": "^0.9.15"
   }
 }

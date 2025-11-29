@@ -1,0 +1,7 @@
+
+
+let greeting= function(){return flip(.5)?"Hello":"Hi"}
+let aParent = function(){return flip(.5)?"Mam":"Dad"}
+
+let phrase=greeting()+ " "+ aParent()+ "!"
+phrase;
